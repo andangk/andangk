@@ -47,12 +47,15 @@ const mBaram = L.marker([5.1, 114]).bindPopup('Baram Basin').addTo(projects);
 const mSabah = L.marker([7, 116]).bindPopup('Sabah Basin').addTo(projects);
 const mNWJava = L.marker([-6.26, 108.3]).bindPopup('Northwest Java Basin').addTo(projects);
 
-const map = L.map('map').fitWorld();
-
-const tiles = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}', {
+var tiles = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}', {
 	maxZoom: 8,
 	attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
-}).addTo(map);
+});
+
+var map = L.map('map', { 
+				zoomControl: false,
+				worldCopyJump: true
+			}).addLayer(tiles);
 
 function onLocationFound(e) {
     var radius = e.accuracy;
