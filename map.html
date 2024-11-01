@@ -34,8 +34,8 @@
 
 <script>
 const projects = L.layerGroup();
-const mSapi = L.marker([-0.916666667, 117.23]).bindPopup('Sapi field').addTo(projects);
-const mBunyu = L.marker([3.45, 117.86]).bindPopup('Bunyu field').addTo(projects);
+const mKutai = L.marker([-0.916666667, 117.23]).bindPopup('Kutai basin: Sapi, Yakin, Santan fields etc').addTo(projects);
+const mBunyu = L.marker([3.45, 117.86]).bindPopup('Tarakan sub basin: Bunyu, Pamusian, and Sembakung fields').addTo(projects);
 const mThaiBinh = L.marker([20.4, 106.3]).bindPopup('Thai Binh field').addTo(projects);
 const mCarnarvon = L.marker([-21, 115]).bindPopup('Northern Carnarvon basin').addTo(projects);
 const mTemana = L.marker([3.3, 113]).bindPopup('Temana field').addTo(projects);
@@ -45,7 +45,10 @@ const mJDA = L.marker([7.17, 102.5]).bindPopup('JDA Block A-18').addTo(projects)
 const mMalay = L.marker([5.1, 105]).bindPopup('Malay Basin').addTo(projects);
 const mBaram = L.marker([5.1, 114]).bindPopup('Baram Basin').addTo(projects);
 const mSabah = L.marker([7, 116]).bindPopup('Sabah Basin').addTo(projects);
-const mNWJava = L.marker([-6.26, 108.3]).bindPopup('Northwest Java Basin').addTo(projects);
+const mNWJava = L.marker([-6.26, 108.3]).bindPopup('Northwest Java Basin: Akasia Bagus').addTo(projects);
+const mSemai = L.marker([-3, 133]).bindPopup('Blok Semai II').addTo(projects);
+const mMasela = L.marker([-8, 130]).bindPopup('Blok Masela').addTo(projects);
+
 
 var tiles = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}', {
 	maxZoom: 8,
