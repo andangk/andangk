@@ -75,8 +75,10 @@ const layerControl = L.control.layers(baseLayers, overlays).addTo(map);
 
 const muaraLaboh = L.marker([-1.63, 101.13]).bindPopup('Muara Laboh');
 const wayangWindu = L.marker([-7.2, 107.6]).bindPopup('Wayang Windu');
+const Suban = L.marker([-3.7, 104]).bindPopup('Suban CBM');
 
 const geothermal = L.layerGroup([muaraLaboh, wayangWindu]);
+const cbm = L.layerGroup([Suban]);
 
 const openTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
@@ -84,6 +86,7 @@ const openTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.pn
 });
 layerControl.addBaseLayer(openTopoMap, 'OpenTopoMap');
 layerControl.addOverlay(geothermal, 'Geothermal');
+layerControl.addOverlay(cbm, 'Coalbed Methane');
 </script>
 
 
