@@ -35,6 +35,7 @@
 <script>
 const projects = L.layerGroup();
 const mSapi = L.marker([-0.916666667, 117.23]).bindPopup('Sapi field').addTo(projects);
+const mBunyu = L.marker([3.45, 117.86]).bindPopup('Bunyu field').addTo(projects);
 
 const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
@@ -63,8 +64,8 @@ const overlays = {
 
 const layerControl = L.control.layers(baseLayers, overlays).addTo(map);
 
-const muaraLaboh = L.marker([39.75, -105.09]).bindPopup('Muara Laboh');
-const wayangWindu = L.marker([39.68, -105.00]).bindPopup('Wayang Windu');
+const muaraLaboh = L.marker([-1.63, 101.13]).bindPopup('Muara Laboh');
+const wayangWindu = L.marker([-7.2, 107.6]).bindPopup('Wayang Windu');
 
 const geothermal = L.layerGroup([muaraLaboh, wayangWindu]);
 
