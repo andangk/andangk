@@ -13,139 +13,17 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="screen.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link href="dist/leaflet-markercluster-list.css" rel="stylesheet" />
-	<link rel="stylesheet" href="dist/MarkerCluster.css" />
-	<link rel="stylesheet" href="dist/MarkerCluster.Default.css" />
-	<script src="dist/leaflet.markercluster-src.js"></script>
-	<script src="dist/leaflet-markercluster-list.src.js"></script>
-	<script src="dist/jquery.min.js"></script>
-	<script src="dist/leaflet.featuregroup.subgroup.js"></script>
 	<style>
-		#map {
-		    /* height: 880px; */
-			width: 100%;
+		html, body {
+			height: 100%;
+			margin: 0;
 		}
-
-		img {
-			width:400px;
+		.leaflet-container {
+			height: 400px;
+			width: 600px;
+			max-width: 100%;
+			max-height: 100%;
 		}
-
-		.leaflet-bar a {
-			background-color: #fff;
-			border-bottom: 1px solid #ccc;
-			/* border-bottom-color: rgb(204, 204, 204); */
-			color: #444;
-			display: block;
-			height: 26px;
-			width: 26px;
-			line-height: 1.45 !important;
-			text-align: center;
-			text-decoration: none;
-			font: bold 18px'Lucida Console', Monaco, monospace;
-		}
-
-		.legend {
-			line-height: 18px;
-			color: #555;
-			background-color: 'white';
-		}
-		.legend i {
-			width: 18px;
-			height: 18px;
-			float: left;
-			margin-right: 8px;
-			opacity: 0.7;
-		}
-
-		.info.legend {
-        	background-color: white;
-    	}
-		
-		.popup {
-			width: 500px;
-		}
-
-		.bn {
-			-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-			filter: grayscale(100%);
-		}
-		.brightness{
-			-webkit-filter: brightness(150%); /* Safari */
-			filter: brightness(150%);
-		}
-		.contrast{
-			-webkit-filter: contrast(60%); /* Safari */
-			filter: contrast(60%);
-		}
-		.hue{
-			-webkit-filter: hue-rotate(90deg); /* Safari */
-			filter: hue-rotate(90deg);
-		}
-		.invert{
-			-webkit-filter: invert(100%); /* Safari */
-			filter: invert(100%);
-		}
-		/* Tambe funciona amb setOpacity del Leaflet*/ 
-		.opacity{
-			-webkit-filter: opacity(30%); /* Safari */
-			filter: opacity(30%);
-		}
-		.saturate{
-			-webkit-filter: saturate(800%); /* Safari */
-			filter: saturate(800%);
-		}
-		.sepia{
-			-webkit-filter: sepia(100%); /* Safari */
-			filter: sepia(100%);
-		}
-
-		ul {position: fixed;}
-
-		li {
-			text-align: left;
-			display: block;
-			text-decoration: none;
-		}
-
-		li.drop-down {
-			cursor: pointer;
-			transition: 0s;
-		}
-
-		div.drop-down-panel {
-			max-height: 0;
-			overflow: hidden;
-			transition: max-height 0.5s ease-out;
-		}
-
-		a.panel {
-			text-align: left;
-			display: block;
-			text-decoration: none;
-		}
-
-		.marker-cluster-small {
-			background-color: #49afa5 !important;
-		}
-
-		.marker-cluster-small div {
-			background-color: #1c9489 !important;
-			color: #fff !important;
-		}
-
-
-		.marker-cluster-medium {
-			background-color: #49afa5 !important;
-		}
-
-		.marker-cluster-medium div {
-			background-color: #1c9489 !important;
-			color: #fff !important;
-		}
-
 	</style>
 
 	
